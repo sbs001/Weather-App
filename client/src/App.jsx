@@ -17,3 +17,8 @@ function App() {
 }
 
 export default App;
+
+/* 
+https://openweathermap.org/img/wn/01d@2x.png
+http://api.openweathermap.org/data/2.5/weather?q=madrid&APPID=651a1a00498a9c2594c3518a64d77329
+*/
