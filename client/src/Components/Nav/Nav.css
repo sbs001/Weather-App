@@ -1,6 +1,5 @@
 .nav {
     margin: 0 auto;
-    width: 70%;
     height: 45px;
     display: flex;
     justify-content: center;
@@ -18,11 +17,13 @@
     display: flex;
     align-items: center;
     transition: ease-in 0.2s;
+    padding-block: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 .nav a:hover {
-    padding-block: 10px;
-    border-radius: 0 0 15px 15px;
+    padding-block: 5px;
+    border-radius: 0 0 10px 10px;
 }
 
 .nav a:active {

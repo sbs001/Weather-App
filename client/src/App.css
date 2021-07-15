@@ -1,5 +1,10 @@
 .App {
     text-align: center;
+    width: 100%;
+    background-image: url(/src/img/bg1.gif);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
 
 :root {
