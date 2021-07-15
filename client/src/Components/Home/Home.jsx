@@ -9,6 +9,7 @@ export default function Home() {
 
   const cities = useSelector(state => state.cities);
 
+  console.log('home',cities)
 
   return (
     <div className="home">
