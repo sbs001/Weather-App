@@ -1,13 +1,22 @@
+import axios from "axios";
+import swal from 'sweetalert';
+import dotenv from "dotenv";
+dotenv.config();
+
+
+const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
+
 export const GET_CITY = 'GET_CITY';
 
-// export function getCity() {
-//     return function(dispatch) {
-//         return axios.get(URL_PRODUCTS).then((response) => {
-//                 dispatch({
-//                     type: GET_PRODUCTS,
-//                     payload: response.data,
-//                 });
-//             })
-//             .catch((err) => { swal('Error', err.response.data, 'warning'); });
-//     };
-// }
+export function getCity(city) {
+    return function(dispatch) {
+        return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${REACT_APP_API_KEY}`)
+            .then((response) => {
+                dispatch({
+                    type: GET_CITY,
+                    payload: response.data,
+                });
+            })
+            .catch((err) => swal('City not fond', 'Please, try again', 'warning'));
+    };
+}
