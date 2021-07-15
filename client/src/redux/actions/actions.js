@@ -7,6 +7,7 @@ dotenv.config();
 const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
 
 export const GET_CITY = 'GET_CITY';
+export const DELETE_CITY = 'DELETE_CYTY'
 
 export function getCity(city) {
     return function(dispatch) {
@@ -19,4 +20,11 @@ export function getCity(city) {
             })
             .catch((err) => swal('City not fond', 'Please, try again', 'warning'));
     };
+}
+
+export function deleteCity(nameCity) {
+    return {
+        type: DELETE_CITY,
+        payload: nameCity
+    }
 }
