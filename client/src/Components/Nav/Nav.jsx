@@ -6,7 +6,7 @@ import logo from '../../logo.svg'
 export default function Nav() {
 
   return (
-    <div className='nav'>
+    <div className='navCtn'>
       <Link to='/'><img src={logo} alt="" style={{ width: 50 }} /></Link>
       <Link to='/'> Home</Link>
       <Link to='about'> About Me </Link>
