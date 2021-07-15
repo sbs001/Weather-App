@@ -12,7 +12,7 @@ export default function Card({ city }) {
   }
 
   return (
-    <div className='cardWeather'>
+    <div className='cardWeather fadeIn'>
       <button className='close' onClick={handleclick}>X</button>
       <div className="head">
         <img src={`https://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`} alt="" />

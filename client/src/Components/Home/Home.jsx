@@ -9,15 +9,13 @@ export default function Home() {
 
   const cities = useSelector(state => state.cities);
 
-  console.log('home',cities)
-
   return (
     <div className="home">
       <div className="cities">
         {!cities.length && <h1>Wellcome to WeatherApp</h1>}
         <DisplayCards />
       </div>
-      <div className="searchCtn">
+      <div className="searchCtn fadeIn">
         <SearchBar />
       </div>
     </div>

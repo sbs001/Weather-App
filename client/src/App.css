@@ -13,3 +13,16 @@
     --secondary: rgb(97, 114, 175);
     --tertiary: rgba(97, 114, 175, 0.398);
 }
+
+.fadeIn {
+    animation: fadeIn ease-in 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
