@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteCity } from '../../redux/actions/actions';
+import { Link } from 'react-router-dom';
+
 import './Card.css';
 
 export default function Card({ city }) {
@@ -21,7 +23,9 @@ export default function Card({ city }) {
       <hr />
       <div className='body'>
         <h1>{city.name}</h1>
-        <button>See more...</button>
+        <Link to={`/${city.name}`}>
+          <button>See more...</button>
+        </Link>
       </div>
     </div>
   )
