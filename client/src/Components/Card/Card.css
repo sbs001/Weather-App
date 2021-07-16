@@ -1,17 +1,18 @@
 .cardWeather {
-    width: 200px;
-    height: 240px;
-    border: rgba(124, 119, 119, 0.282) 1px solid;
+    width: 210px;
+    height: 290px;
     background-color: var(--tertiary);
     margin: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
 .close {
     position: absolute;
     right: 0;
+    top: 0;
     margin: 0;
     border: none;
     background-color: var(--primary);
@@ -31,25 +32,49 @@
 .head {
     width: 100%;
     display: flex;
-    height: 60%;
+    height: 50%;
     align-items: center;
+    justify-content: center;
 }
 
 .head img {
-    width: 70%;
+    width: 50%;
+    transform: translateX(-5px);
+}
+
+.tempCtn {
+    width: 50%;
+    display: flex;
+    height: 100%;
+    color: white;
+    align-items: center;
     transform: translateX(-15px);
 }
 
-.head span {
-    width: 30%;
-    position: absolute;
-    right: 20px;
-    transform: scale(3.5);
+.tempBig {
+    width: 70%;
     font-weight: 200;
-    color: white;
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    transform: scaleY(1.5);
 }
 
-.cardWeather h1 {
+.tempLow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 30%;
+    font-weight: 300;
+    transform: translateX(5px) scaleY(1.5);
+}
+
+#c {
+    font-size: 20px;
+}
+
+.tempBig .cardWeather h1 {
     font-weight: 400;
     color: white;
     margin: 0
@@ -68,7 +93,30 @@
     width: 90%;
     margin: 0 auto;
     border-color: var(--primary);
-    transform: translateY(-15px);
+}
+
+.cardWeather p {
+    color: whitesmoke;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.body p {
+    position: absolute;
+    left: 20px;
+    top: 10px
+}
+
+body h1 {
+    transform: translateY(-20px);
+}
+
+.body a {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 10%;
 }
 
 .body button {
@@ -80,11 +128,6 @@
     width: 90%;
     height: 100%;
     font-size: 1rem;
-}
-
-.body a {
-    width: 100%;
-    height: 40%;
 }
 
 .cardWeather:hover {

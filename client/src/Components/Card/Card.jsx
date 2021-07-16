@@ -1,8 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteCity } from '../../redux/actions/actions';
-import { Link } from 'react-router-dom';
-
 import './Card.css';
 
 export default function Card({ city }) {
@@ -12,21 +10,33 @@ export default function Card({ city }) {
   const handleclick = () => {
     dispatch(deleteCity(city.name))
   }
+  const date = new Date();
 
   return (
     <div className='cardWeather fadeIn'>
       <button className='close' onClick={handleclick}>X</button>
       <div className="head">
         <img src={`https://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`} alt="" />
-        <span>{Math.round(city.main.temp) - 273}°</span>
+        <div className='tempCtn'>
+          <span className='tempBig'>{Math.round(city.main.temp) - 273}</span>
+          <div className='tempLow'>
+            <span id='c'>°C</span>
+            <span>{Math.round(city.main.temp_min) - 273}°C</span>
+            <span>{Math.round(city.main.temp_max) - 273}°C</span>
+          </div>
+        </div>
       </div>
+      <p className='desc'>{`${city.weather[0].main},${city.weather[0].description}`}</p>
+
       <hr />
       <div className='body'>
-        <h1>{city.name}</h1>
-        <Link to={`/${city.name}`}>
+        <p>{date.toDateString().substr(4, 6) + ', ' + date.toTimeString().substr(0, 5)}</p>
+        <h1>{city.name}, {city.sys.country}</h1>
+        <a href={`https://openweathermap.org/city/${city.id}`} target="_blank" rel="noreferrer">
           <button>See more...</button>
-        </Link>
+        </a>
       </div>
+
     </div>
   )
 }

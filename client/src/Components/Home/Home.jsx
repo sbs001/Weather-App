@@ -8,7 +8,6 @@ import './Home.css'
 export default function Home() {
 
   const cities = useSelector(state => state.cities);
-
   return (
     <div className="home">
       <div className="cities">
