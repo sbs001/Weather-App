@@ -9,8 +9,8 @@
 
 .navCtn a {
     text-decoration: none;
-    margin-inline: 5px;
-    padding-inline: 5px;
+    margin-inline: 10px;
+    padding-inline: 15px;
     background-color: var(--secondary);
     color: var(--font-color1);
     height: 100%;
@@ -18,10 +18,44 @@
     align-items: center;
     transition: ease-in 0.2s;
     padding-block: 10px;
-    border-radius: 0 0 10px 10px;
+}
+
+.aAnimated1s {
+    animation: slideBottom ease-in 1s;
+}
+
+.aAnimated2s {
+    animation: slideBottom ease-in 1.5s;
+}
+
+.aAnimated3s {
+    animation: slideBottom ease-in 2s;
+}
+
+.fromLeft {
+    animation: fromLeft ease 2s;
 }
 
 .navCtn a:hover {
-    padding-block: 5px;
-    border-radius: 0 0 10px 10px;
+    padding-block: 25px;
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50000px);
+    }
+    to {
+        opacity: 2;
+        transform: translateX(0px);
+    }
 }
