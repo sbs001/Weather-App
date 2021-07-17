@@ -46,3 +46,19 @@
         -webkit-text-stroke: 1px var(--secondary);
     }
 }
+
+@media (max-width:420px) {
+    .home {
+        width: 90%;
+        border: none;
+        margin-top: 40px;
+    }
+    .welcome {
+        font-size: 40px;
+        font-weight: 400;
+        margin-top: 40px;
+    }
+    .searchCtn {
+        width: 95%;
+    }
+}

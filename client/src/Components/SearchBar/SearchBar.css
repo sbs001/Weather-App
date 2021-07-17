@@ -36,3 +36,9 @@ input[name=search] {
 .searchBar form button:hover {
     opacity: 0.9;
 }
+
+@media (max-width:420px) {
+    .searchBar {
+        width: 90%;
+    }
+}

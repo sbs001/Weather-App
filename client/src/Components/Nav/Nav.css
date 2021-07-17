@@ -59,3 +59,13 @@
         transform: translateX(0px);
     }
 }
+
+@media (max-width:420px) {
+    .navCtn a {
+        margin-inline: 5px;
+        padding-block: 0;
+    }
+    .navCtn a:hover {
+        padding-block: 0;
+    }
+}
