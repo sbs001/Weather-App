@@ -8,12 +8,16 @@ export default function Card({ city }) {
   const dispatch = useDispatch();
 
   const handleclick = () => {
-    dispatch(deleteCity(city.name))
+    document.getElementById(`card${city.name}`).classList.add('closeCard');
+    
+    setTimeout(() => {
+      dispatch(deleteCity(city.name));
+    }, 300); 
   }
   const date = new Date();
 
   return (
-    <div className='cardWeather fadeIn'>
+    <div id={`card${city.name}`} className='cardWeather fadeIn'>
       <button className='close' onClick={handleclick}>X</button>
       <div className="head">
         <img src={`https://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`} alt="" />

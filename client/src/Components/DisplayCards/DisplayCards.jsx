@@ -10,7 +10,7 @@ export default function DisplayCards(){
   if (!cities.length) return <h1 className="dispEmpty">Search a new city, please</h1>
   return(
     <div className="display">
-      {cities.map(city => <div><Card city={city}/></div> )}
+      {cities.map(city => <div key={city.id}><Card city={city}/></div> )}
     </div>
   )
 }
