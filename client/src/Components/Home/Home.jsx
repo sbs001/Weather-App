@@ -7,11 +7,11 @@ import './Home.css'
 
 export default function Home() {
 
-  const cities = useSelector(state => state.cities);
+  const initial = useSelector(state => state.initial);
   return (
     <div className="home">
       <div className="cities">
-        {!cities.length && <h1>Wellcome to WeatherApp</h1>}
+        {initial && <h1 className="welcome">Welcome to WeatherApp</h1>}
         <DisplayCards />
       </div>
       <div className="searchCtn fadeIn">

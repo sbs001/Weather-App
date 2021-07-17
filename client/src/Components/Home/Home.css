@@ -26,3 +26,23 @@
     justify-content: center;
     align-items: center;
 }
+
+.welcome {
+    font-size: 50px;
+    animation: welcome linear infinite 2s;
+}
+
+@keyframes welcome {
+    0% {
+        color: var(--primary);
+        -webkit-text-stroke: 1px var(--secondary);
+    }
+    50% {
+        color: var(--secondary);
+        -webkit-text-stroke: 1px var(--primary);
+    }
+    100% {
+        color: var(--primary);
+        -webkit-text-stroke: 1px var(--secondary);
+    }
+}

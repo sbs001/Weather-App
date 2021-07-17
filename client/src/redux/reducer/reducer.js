@@ -1,7 +1,8 @@
 import { DELETE_CITY, GET_CITY } from "../actions/actions";
 
 const InitialState = {
-    cities: []
+    cities: [],
+    initial: true,
 };
 
 export default function rootReducer(state = InitialState, action) {
@@ -9,6 +10,7 @@ export default function rootReducer(state = InitialState, action) {
     if (action.type === GET_CITY) {
         return {
             ...state,
+            initial: false,
             cities: [...state.cities, action.payload]
         }
     }
