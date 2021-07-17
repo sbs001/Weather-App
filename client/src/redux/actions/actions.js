@@ -18,7 +18,7 @@ export function getCity(city) {
                     payload: response.data,
                 });
             })
-            .catch((err) => swal('City not fond', 'Please, try again', 'warning'));
+            .catch((err) => swal('City not found', 'Please, try again', 'warning'));
     };
 }
 

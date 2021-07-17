@@ -15,12 +15,13 @@ export default function SearchBar() {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(getCity(input))
+    dispatch(getCity(input));
+    document.getElementById('form').reset()
   }
 
   return (
     <div className='searchBar'>
-      <form onSubmit={handleSubmit}>
+      <form id='form' onSubmit={handleSubmit}>
 
         <input name="search" type="text" onChange={handleInputChange} placeholder="Search city..." required />
         <button type="submit"><BsSearch /></button>

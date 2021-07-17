@@ -11,7 +11,7 @@ export default function rootReducer(state = InitialState, action) {
         return {
             ...state,
             initial: false,
-            cities: [...state.cities, action.payload]
+            cities: state.cities.find(c => c.name === action.payload.name) ? [...state.cities] : [...state.cities, action.payload]
         }
     }
 
