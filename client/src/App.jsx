@@ -1,4 +1,4 @@
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter,Switch } from 'react-router-dom';
 import './App.css';
 import About from './Components/About/About';
 import Home from './Components/Home/Home';
@@ -11,8 +11,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-        <Route exact path='/' component={Home} />
-        <Route path='/about' component={About} />
+        <Switch>
+          <Route path='/' component={Home} />
+          <Route path='/about' component={About} />
+        </Switch>
       </BrowserRouter>
     </div>
   );

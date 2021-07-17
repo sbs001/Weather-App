@@ -37,7 +37,7 @@ input[name=search] {
     opacity: 0.9;
 }
 
-@media (max-width:420px) {
+@media (max-width:490px) {
     .searchBar {
         width: 90%;
     }

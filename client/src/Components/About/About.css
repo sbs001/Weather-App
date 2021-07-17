@@ -62,7 +62,7 @@
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:490px) {
     .about {
         width: 80%;
     }

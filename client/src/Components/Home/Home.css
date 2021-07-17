@@ -47,7 +47,7 @@
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:490px) {
     .home {
         width: 90%;
         border: none;

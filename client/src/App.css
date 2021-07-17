@@ -27,7 +27,7 @@
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:490px) {
     .App {
         background-image: url(/src/img/bg-mobile.gif);
         background-size: cover;

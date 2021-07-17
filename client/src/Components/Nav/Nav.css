@@ -60,7 +60,7 @@
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:490px) {
     .navCtn a {
         margin-inline: 5px;
         padding-block: 0;
