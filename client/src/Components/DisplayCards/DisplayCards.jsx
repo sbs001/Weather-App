@@ -7,7 +7,7 @@ export default function DisplayCards(){
   
   const cities = useSelector(state => state.cities);
 
-  if (!cities.length) return <h3>Search a new city, please</h3>
+  if (!cities.length) return <h1 className="dispEmpty">Search a new city, please</h1>
   return(
     <div className="display">
       {cities.map(city => <div><Card city={city}/></div> )}

@@ -29,7 +29,7 @@
 
 .welcome {
     font-size: 50px;
-    animation: welcome linear infinite 2s;
+    animation: welcome linear infinite 5s;
 }
 
 @keyframes welcome {
